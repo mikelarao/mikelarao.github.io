@@ -39,3 +39,8 @@ Thumbs.db
 # sass cache #
 .sass-cache
 .sass-cache/*
+
+
+# node modules #
+node_modules
+node_modules/*
