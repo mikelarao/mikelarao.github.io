@@ -13,14 +13,14 @@ gulp.task('scripts', function() {
 	.pipe(rename({
 		suffix: '.min'
     }))
-	.pipe(gulp.dest('_app/assets/js/'))
+	.pipe(gulp.dest('app/assets/js/'))
 });
 
 gulp.task('styles', function() {
 	return sass('sass/*.sass', { sourcemap: true, style: 'expanded' })
     .on('error', sass.logError)
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('_app/assets/css/'))
+    .pipe(gulp.dest('app/assets/css/'))
     .pipe(browserSync.reload({
       stream: true
     }))
@@ -30,7 +30,7 @@ gulp.task('styles', function() {
 gulp.task('browserSync', function() {
   browserSync({
     server: {
-      baseDir: './_app/'
+      baseDir: './app/'
     },
   })
 });
@@ -38,8 +38,8 @@ gulp.task('browserSync', function() {
 gulp.task('watch', ['browserSync'], function() {
 	gulp.watch('js/*.js', ['scripts']);
 	gulp.watch('sass/**/*', ['styles']);
-	gulp.watch('_app/*.html').on('change', browserSync.reload);
-	gulp.watch('_app/assets/js/main.js').on('change', browserSync.reload);
+	gulp.watch('app/*.html').on('change', browserSync.reload);
+	gulp.watch('app/assets/js/main.js').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['scripts', 'styles', 'watch']);
