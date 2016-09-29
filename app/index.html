@@ -12,7 +12,11 @@
 </head>
 <body>
 
+  <div class="loader">
+    <span class="load1">
 
+    </span>
+  </div>
 
   <div class="main">
     <div class="container">
@@ -479,9 +483,12 @@
   <script src="assets/js/jquery.reject.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script type="text/javascript">
-  $('.grid').masonry({
-    // options
-    itemSelector: '.grid-item',
+  $( document ).ready(function() {
+    $('.grid').masonry({
+      // options
+      itemSelector: '.grid-item',
+    });
+    $( ".loader" ).addClass( "hidden" );
   });
   </script>
 </body>
