@@ -9,6 +9,21 @@
   <link rel="stylesheet" href="assets/css/main.css"/>
   <link rel="stylesheet" href="assets/css/custom.css"/>
   <link rel="stylesheet" href="assets/css/reject.css"/>
+  <script>
+  $(window).load(function(){
+    $('.grid').masonry({
+      // options
+      itemSelector: '.grid-item',
+      isAnimated: true,
+      animationOptions: {
+        duration: 700,
+        easing: 'linear',
+        queue: false
+      }
+    });
+    $( ".loader" ).addClass( "hidden" );
+  });
+  </script>
 </head>
 <body>
 
@@ -482,23 +497,6 @@
   <script src="assets/js/jquery.placeholder.min.js"></script>
   <script src="assets/js/jquery.reject.min.js"></script>
   <script src="assets/js/main.js"></script>
-  <script type="text/javascript">
-  $( document ).load(function() {
-
-    $('.grid').masonry({
-      // options
-      itemSelector: '.grid-item',
-          isAnimated: true,
-          animationOptions: {
-               duration: 700,
-               easing: 'linear',
-               queue: false
-             }
-    });
-
-    $( ".loader" ).addClass( "hidden" );
-  });
-  </script>
 </body>
 
 </html>
