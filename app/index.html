@@ -484,6 +484,7 @@
   <script src="assets/js/main.js"></script>
   <script type="text/javascript">
   $( document ).ready(function() {
+
     $('.grid').masonry({
       // options
       itemSelector: '.grid-item',
@@ -492,7 +493,9 @@
                duration: 700,
                easing: 'linear',
                queue: false
+             }
     });
+
     $( ".loader" ).addClass( "hidden" );
   });
   </script>
