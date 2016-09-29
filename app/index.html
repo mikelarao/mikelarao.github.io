@@ -484,6 +484,7 @@
   <script src="assets/js/main.js"></script>
 
   <script>
+  jQuery( "body" ).css( "overflow", "hidden" );
   jQuery(window).on('load',function(){
     jQuery('.grid').masonry({
       // options
@@ -496,6 +497,7 @@
       }
     });
     jQuery( ".loader" ).addClass( "hidden" );
+    jQuery( "body" ).css( "overflow", "auto" );
   });
   </script>
 </body>
