@@ -50,3 +50,20 @@ hr
   display: flex
   align-items: center
   justify-content: flex-end
+
+
+.row
+  margin:
+    right: -15px
+    left: -15px
+  &:after
+    display: table
+    content: " "
+    clear: both
+
+.half
+  float: left
+  width: 100%
+  @media only screen and (min-width : 768px)
+    width: 50%
+  padding: 0px 15px
