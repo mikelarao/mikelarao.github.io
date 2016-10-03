@@ -2,10 +2,10 @@
   width: 100%
   @media only screen and (min-width : 768px)
     width: 50%
+    overflow: auto
   @media only screen and (min-width : 992px)
     width: 40%
   height: 100%
-  overflow: auto
   float: left
   padding: 15px
   background-color: $gray
@@ -40,7 +40,7 @@
       float: left
 
       img
-        width: 100%
+        max-width: 100%
         float: left
         opacity: 1
         transition: all 0.25s ease
@@ -67,8 +67,7 @@
           height: 25px
           width: 25px
           border-radius: 25px
-          &+a
-            margin-left: 15px
+          cursor: pointer
 
           &:hover
             color: $gray3

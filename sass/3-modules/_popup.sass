@@ -1,63 +1,37 @@
-.overlay
-  position: fixed
-  top: 0
-  bottom: 0
-  left: 0
-  right: 0
-  background: rgba(255, 255, 255, 0.95)
-  visibility: hidden
-  filter: alpha(opacity=0)
-  opacity: 0
-  z-index: 1
-  overflow: auto
-  &:target
-    visibility: visible
-    opacity: 1
-    // transition: opacity 0.15s ease-in-out
-    .popup
-      margin: 70px auto
-
-.popup
-  margin: -100% auto 0
-  background: $white
-  border-radius: 0px
-  border: 2px solid $gray
-  width: 75%
-  @media only screen and (min-width : 768px)
+.modal
+  background: rgba(255,255,255,0.9)
+  &-dialog
+    border-radius: 0px
     width: 80%
-  @media only screen and (min-width : 992px)
-    width: 920px
-  position: relative
-  transition: all 0.5s ease-in-out
+    margin-right: auto
+    margin-left: auto
+    @media (min-width: 992px)
+      width: 900px
 
-  h3
-    font-weight: 500
+  &-content
+    border-radius: 0px
+    border: 2px solid $gray2
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5)
+    img
+      border: 1px solid $gray
+      &.img-responsive
+        width: 100%
 
-  ul
+  &-header
+    padding: 30px
+    background-color: $vanilla
+    border: 0px
+    button.close
+      position: fixed
+      margin: 0px
+      right: -30px
+      @media (min-width: 768px)
+        right: -45px
+      border: 0px
+      background: transparent
 
-  .close
-    position: absolute
-    margin: 1em 0px
-    right: -45px
-    transition: all 200ms
-    font-size: 30px
-    text-decoration: none
-    color: $gray3
-
-    &:hover
-      color: $blue
-
-  &--header
-    padding: 20px 30px
-    background: $vanilla
-    .categ
-      margin: 1em 0px
-      padding: 5px 0
-      float: right
-
-  &--content
+  &-body
     padding: 30px
 
-    img
-      width: 100%
-      border: 1px solid $gray
+  &-footer
+    padding: 30px
